@@ -35,3 +35,7 @@ http://babeliao.github.io/emoji-expression-plugin/
     <ul class="nav-tab-face selfclear" id="navTabBox"></ul>
  </div>
 ```
+
+## License
+
+Licensed under the [MIT License](http://opensource.org/licenses/MIT).
