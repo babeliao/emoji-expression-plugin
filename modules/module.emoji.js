@@ -71,7 +71,7 @@ var emoji = (function (window, $) {
         }).replace(/\[[^\[\]]*?\]/g, function ($1) {
             var url = emotionsMap[$1];
             if (url) {
-                return '<i  contenteditable="true" class="' + url + '"></i>';
+                return '<i class="' + url + '"></i>';
             }
             return $1;
         });
