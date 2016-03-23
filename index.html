@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>表情</title>
+    <script type="text/javascript" src="lib/zepto.js"></script>
+    <link rel="stylesheet" href="css/mod.emoji.css"/>
+</head>
+<body>
+<section>
+    <textarea placeholder="请输入回复内容不少于3个字" id="textContent" style="border: solid 1px #999;
+    border-radius: 5px;width: 100%;height: 120px;margin-top: 20px;
+    padding: 2px 2px 2px 10px;box-sizing: border-box;font-size: 16px;"></textarea>
+    <div id="emojiBtn" style="position: absolute;top: 104px;left: 13px;">
+        <img width="40px" height="40px" src="images/emojiButton.png">
+    </div>
+    <div class="face-main" id="faceMain">
+        <div class="face-main-box" id="faceMainBox"></div>
+        <ul class="nav-tab-face selfclear" id="navTabBox"></ul>
+    </div>
+    <div id="byBtn" style="margin-top: 10px;background-color: #eee;width: 60px;
+    height: 25px;border-radius: 12px;text-align: center;line-height: 25px;">编译</div>
+    <div id="result" class="replyer-emoji-box" style="margin-top: 10px;padding-top: 4px;
+    border-top: 1px solid #DADADA;line-height: 25px;"></div>
+</section>
+<script type="text/javascript" src="lib/zepto.touchSwipe.js"></script>
+<script type="text/javascript" src="modules/module.emoji.js"></script>
+<script>
+    //编译事件
+    $("#byBtn").on("click", function () {
+        var content = $("#textContent").val();
+        $('#result').html(emoji.parseEmotionText(content));
+        //或者用以下方式
+        //$('#result').html(content).parseEmotion();
+    });
+    //引入表情模块
+    emoji.emojiInit();
+</script>
+</body>
+</html>
