@@ -18,7 +18,7 @@
   border-radius: 1px;}
 #navTabBox>li.current{background-color: #ff8200;}
 .content-tab-face{width: 100%;}
-.face-main{display:none;}
+.face-main{display:none;overflow: hidden;}
 .face.face_1 {
   background-image: url(../images/face/face-1.png);
 }
