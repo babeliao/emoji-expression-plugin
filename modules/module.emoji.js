@@ -9,7 +9,7 @@ var emoji = (function (window, $) {
                 return;
             }
             if (document.selection) {
-                this.focus();
+                //this.focus();
                 var cr = document.selection.createRange();
                 cr.text = text;
                 cr.collapse();
