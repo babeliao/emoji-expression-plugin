@@ -448,7 +448,7 @@ var emoji = (function (window, $) {
 
     //获得焦点关闭表情
     __.focusEvent = function () {
-        __.textDom.on("focus", function () {
+        __.textDom.on("tap", function () {
             if (__.emojiBox.css("display") == "block") {
                 __.emojiBox.hide();
             }
